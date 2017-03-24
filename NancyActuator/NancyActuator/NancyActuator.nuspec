@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package >
+	<metadata>
+		<id>NancyActuator</id>
+		<version>0.1.0-alpha</version>
+		<title>NancyActuator</title>
+		<authors>Mediatech Solutions, Rubén Martínez</authors>
+		<owners>Mediatech Solutions</owners>
+		<licenseUrl>https://www.gnu.org/licenses/lgpl-3.0.en.html</licenseUrl>
+		<projectUrl>https://github.com/mediatechsolutions/NancyActuator</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Library providing Spring Boot's Actuator-like features to a NancyFx application.</description>
+		<releaseNotes>First version, providing the /health endpoint.</releaseNotes>
+		<copyright>Copyright 2017</copyright>
+		<tags>Nancy NancyFx Spring Boot Actuator Health</tags>
+		<dependencies>
+			<dependency id="Nancy" version="[1.4.3,2)" />
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="bin\Release\NancyActuator.dll" target="lib\net45" />
+	</files>  
+</package>
