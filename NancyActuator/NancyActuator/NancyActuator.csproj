@@ -5,7 +5,6 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7A05763B-D083-4090-8D75-DCCB456EEACE}</ProjectGuid>
-    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NancyActuator</RootNamespace>
@@ -41,6 +40,16 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="StackExchange.Redis">
+      <HintPath>..\packages\StackExchange.Redis.1.2.1\lib\net45\StackExchange.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\packages\Npgsql.3.2.2\lib\net45\Npgsql.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Health\AbstractHealthAggregator.cs" />
@@ -53,6 +62,9 @@
     <Compile Include="Core\Health\Status.cs" />
     <Compile Include="Nancy\Modules\HealthModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\Health\Implementations\SqlServerHealthIndicator.cs" />
+    <Compile Include="Core\Health\Implementations\RedisHealthIndicator.cs" />
+    <Compile Include="Core\Health\Implementations\PostgreSQLHealthIndicator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -65,4 +77,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <Folder Include="Core\Health\Implementations\" />
+  </ItemGroup>
 </Project>
