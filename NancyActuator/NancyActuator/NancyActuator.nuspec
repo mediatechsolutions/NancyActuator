@@ -2,7 +2,7 @@
 <package >
 	<metadata>
 		<id>NancyActuator</id>
-		<version>0.1.0-alpha</version>
+		<version>0.1.1-alpha</version>
 		<title>NancyActuator</title>
 		<authors>Mediatech Solutions, Rubén Martínez</authors>
 		<owners>Mediatech Solutions</owners>
@@ -15,6 +15,9 @@
 		<tags>Nancy NancyFx Spring Boot Actuator Health</tags>
 		<dependencies>
 			<dependency id="Nancy" version="[1.4.3,2)" />
+			<dependency id="MongoDB.Driver" version="[2.4.3,3)" />
+			<dependency id="Npgsql" version="[3.2.2,4)" />
+			<dependency id="StackExchange.Redis" version="[1.2.1,2)" />
 		</dependencies>
 	</metadata>
 	<files>
