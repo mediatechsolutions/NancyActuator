@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Nancy;
+using Nancy.Json;
+using Nancy.Responses;
 using NancyActuator.Core.Health;
 
 namespace NancyActuator.Nancy.Modules
@@ -13,7 +15,7 @@ namespace NancyActuator.Nancy.Modules
             {
                 var compositeHealthIndicator = new CompositeHealthIndicator(new OrderedHealthAggregator(),
                     healthIndicators.ToDictionary(hi => hi.GetType().Name, hi => hi));
-                return compositeHealthIndicator.Health();
+                return Response.AsJson(compositeHealthIndicator.Health(), HttpStatusCode.OK);
             };
         }
     }

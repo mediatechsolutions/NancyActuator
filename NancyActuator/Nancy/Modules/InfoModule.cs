@@ -15,7 +15,7 @@ namespace NancyActuator.Nancy.Modules
                 foreach (var infoContributor in infoContributors)
                     infoContributor.Contribute(infoBuilder);
 
-                return infoBuilder.Build();
+                return Response.AsJson(infoBuilder.Build(), HttpStatusCode.OK);
             };
         }
     }
