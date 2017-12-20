@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NancyActuator.RedisHealthCh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NancyActuator.SQLServerHealthCheck", "NancyActuator.SQLServerHealthCheck\NancyActuator.SQLServerHealthCheck.csproj", "{671F1438-725F-4C83-BF94-6D0BC2DA4743}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NancyActuator.PostgresSQLHealthCheck", "NancyActuator.PostgresSQLHealthCheck\NancyActuator.PostgresSQLHealthCheck.csproj", "{39AF99E1-B10B-4E00-95CE-B4BF1E5DC821}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NancyActuator.PostgreSQLHealthCheck", "NancyActuator.PostgreSQLHealthCheck\NancyActuator.PostgreSQLHealthCheck.csproj", "{39AF99E1-B10B-4E00-95CE-B4BF1E5DC821}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
