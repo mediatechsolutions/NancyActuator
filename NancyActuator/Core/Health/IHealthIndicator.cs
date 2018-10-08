@@ -9,5 +9,10 @@
         /// Return an indication of Health.
         /// </summary>
         Health Health();
+
+        /// <summary>
+        /// Return the name of the health indicator
+        /// </summary>
+        string GetName();
     }
 }

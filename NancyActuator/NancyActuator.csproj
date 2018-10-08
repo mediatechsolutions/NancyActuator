@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net4.5</TargetFramework>
-    <Version>0.2.0-alpha</Version>
+    <Version>0.2.1-alpha</Version>
     <PackageId>NancyActuator</PackageId>
     <Title>NancyActuator</Title>
     <Summary>Library providing Spring Boot's Actuator-like features to a NancyFx application.</Summary>

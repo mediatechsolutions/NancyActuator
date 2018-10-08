@@ -14,7 +14,7 @@ namespace NancyActuator.Nancy.Modules
             Get["/health"] = parameters =>
             {
                 var compositeHealthIndicator = new CompositeHealthIndicator(new OrderedHealthAggregator(),
-                    healthIndicators.ToDictionary(hi => hi.GetType().Name, hi => hi));
+                    healthIndicators.ToDictionary(hi => hi.GetName(), hi => hi));
                 return Response.AsJson(compositeHealthIndicator.Health(), HttpStatusCode.OK);
             };
         }

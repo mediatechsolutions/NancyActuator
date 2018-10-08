@@ -9,6 +9,15 @@ namespace NancyActuator.Core.Health
     /// </summary>
     public abstract class AbstractHealthIndicator: IHealthIndicator
     {
+        
+        private string _name;
+
+        public AbstractHealthIndicator(string name) {
+            if (name == null)
+                throw new ArgumentNullException("name");
+            _name = name;                
+        }
+        
         public Health Health() {
             var builder = new Health.Builder();
             try {
@@ -25,5 +34,10 @@ namespace NancyActuator.Core.Health
         /// </summary>
         /// <param name="builder"></param>
         protected abstract void DoHealthCheck(Health.Builder builder);
+
+        public string GetName() {
+            return _name;
+        }
+
     }
 }

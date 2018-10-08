@@ -39,6 +39,10 @@ namespace NancyActuator.Core.Health
             _healthAggregator = healthAggregator;
         }
 
+        public string GetName() {
+            return this.GetType().Name;
+        }
+
         public void AddHealthIndicator(string name, IHealthIndicator indicator)
         {
             _indicators.Add(name, indicator);
