@@ -7,11 +7,20 @@ namespace NancyActuator.Core.Health.Implementations
 		private readonly string _connectionString;
 
 		/// <summary>
-		/// Initializes a new instance of the <see cref="NancyActuator.Core.Health.Implementations.PostgreSQLHealthIndicator"/> class.
+		/// Initializes a new instance of the <see cref="NancyActuator.Core.Health.Implementations.MongoDBHealthIndicator"/> class.
 		/// </summary>
-		/// <param name="connectionString">A PostgreSQL connection string.</param>
-		public MongoDBHealthIndicator(string connectionString)
+		/// <param name="connectionString">A MongoDB connection string.</param>
+		public MongoDBHealthIndicator(string connectionString) : base(typeof(MongoDBHealthIndicator).Name)
 		{
+			_connectionString = connectionString;
+		}
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="NancyActuator.Core.Health.Implementations.MongoDBHealthIndicator"/> class.
+		/// </summary>
+		/// <param name="connectionString"> A MongoDB connection string. </param>
+		/// <param name="name"> Name of the health indicator. </param>
+		public MongoDBHealthIndicator(string name, string connectionString) : base(name) {
 			_connectionString = connectionString;
 		}
 

@@ -11,8 +11,17 @@ namespace NancyActuator.Core.Health.Implementations
 		/// Initializes a new instance of the <see cref="NancyActuator.Core.Health.Implementations.PostgreSQLHealthIndicator"/> class.
 		/// </summary>
 		/// <param name="connectionString">A PostgreSQL connection string.</param>
-		public PostgreSQLHealthIndicator (string connectionString)
+		public PostgreSQLHealthIndicator (string connectionString) : base(typeof(PostgreSQLHealthIndicator).Name)
 		{
+			_connectionString = connectionString;
+		}
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="NancyActuator.Core.Health.Implementations.PostgreSQLHealthIndicator"/> class.
+		/// </summary>
+		/// <param name="connectionString"> A PostreSQL connection string. </param>
+		/// <param name="name"> Name of the health indicator. </param>
+		public PostgreSQLHealthIndicator(string name, string connectionString) : base(name) {
 			_connectionString = connectionString;
 		}
 

@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net4.5</TargetFramework>
-    <Version>0.1.0-alpha</Version>
+    <Version>0.1.1-alpha</Version>
     <PackageId>NancyActuator.RedisHealthCheck</PackageId>
     <Title>NancyActuator.RedisHealthCheck</Title>
     <Description>Redis connectivity health check for the NancyActuator library.</Description>
@@ -16,6 +16,6 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="StackExchange.Redis" Version="[1.2.1,2)" />
-    <PackageReference Include="NancyActuator" Version="0.2.0-alpha" />
+    <PackageReference Include="NancyActuator" Version="0.2.1-alpha" />
   </ItemGroup>
 </Project>

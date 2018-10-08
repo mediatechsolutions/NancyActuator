@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net4.5</TargetFramework>
-    <Version>0.1.0-alpha</Version>
+    <Version>0.1.1-alpha</Version>
     <PackageId>NancyActuator.MongoDBHealthCheck</PackageId>
     <Title>NancyActuator.MongoDBHealthCheck</Title>
     <Description>Mongo connectivity health check for the NancyActuator library.</Description>
@@ -15,6 +15,6 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="MongoDB.Driver" Version="[2.4.3,3)" />
-    <PackageReference Include="NancyActuator" Version="0.2.0-alpha" />
+    <PackageReference Include="NancyActuator" Version="0.2.1-alpha" />
   </ItemGroup>
 </Project>
